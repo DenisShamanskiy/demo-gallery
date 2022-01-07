@@ -8,11 +8,20 @@ body {
   font-family: "Muli", sans-serif;
   overflow: hidden;
   margin: 0;
-  background: #111;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    226deg,
+    #da01fd,
+    #7e08b9,
+    #b6aaa7,
+    #3c639f,
+    #6989ff
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 10s ease infinite;
 }
 
 .container {
@@ -51,4 +60,16 @@ body {
 .slide.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
